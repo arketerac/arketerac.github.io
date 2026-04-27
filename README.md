@@ -1,1 +1,248 @@
-# arketerac.github.io
+<!DOCTYPE html>
+<!-- saved from url=(0062)file:///C:/Users/Aidan/Downloads/election_standings%20(3).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DGES Election Standings</title>
+<link href="./DESS Election Standings_files/css2" rel="stylesheet">
+<style>
+  /* =============================================
+     COLOR SCHEME — Edit these to change the whole page
+     ============================================= */
+  :root {
+    --bg: #1A1A00;              /* Page background */
+    --card-bg: #474700;         /* Card background */
+    --card-border: #DAA520;     /* Card border color */
+    --accent: #C49102;          /* Accent color (badge, dots, hover glow) */
+    --text: #e2e4ea;            /* Body text color */
+    --text-muted: #FFFF8A;      /* Subtitle / footer text */
+    --heading: #ffffff;         /* Heading text color */
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(108, 92, 231, 0.08), transparent),
+      radial-gradient(ellipse 60% 50% at 80% 90%, rgba(0, 206, 209, 0.06), transparent);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeDown 0.6s ease-out;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .badge {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.35rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: var(--heading);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+  }
+
+  h1 span {
+    color: var(--accent);
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    overflow: hidden;
+    animation: fadeUp 0.5s ease-out both;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+  }
+
+  .card:nth-child(1) { animation-delay: 0.1s; }
+  .card:nth-child(2) { animation-delay: 0.15s; }
+  .card:nth-child(3) { animation-delay: 0.2s; }
+  .card:nth-child(4) { animation-delay: 0.25s; }
+  .card:nth-child(5) { animation-delay: 0.3s; }
+  .card:nth-child(6) { animation-delay: 0.35s; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-header {
+    padding: 1rem 1.25rem 0.75rem;
+    border-bottom: 1px solid var(--card-border);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .card-header .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent-glow);
+    flex-shrink: 0;
+  }
+
+  .card-header h2 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--heading);
+    letter-spacing: 0.02em;
+  }
+
+  .card .iframe-wrap {
+    overflow: hidden;
+    background: #fff;
+    height: 340px;
+  }
+
+  .card iframe {
+    display: block;
+    width: 110%;
+    height: 450px;
+    border: none;
+    transform: scale(0.95);
+    transform-origin: top left;
+    margin-top: -10px;
+    margin-left: -2%;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    animation: fadeUp 0.5s ease-out 0.5s both;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 2rem 1rem 3rem; }
+    .card .iframe-wrap { height: 300px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- EDIT TITLES HERE -->
+                                <!-- Small label above title -->
+      <h1>DeSS <span>2026/2027 Exec Elections</span></h1>                   <!-- Main title (text in <span> uses accent color) -->
+      <p class="subtitle">i was bored at work</p>  <!-- Subtitle -->
+    </header>
+
+    <div class="grid">
+      <!-- CARD 1 — Edit the <h2> to change the position name -->
+      <div class="card">
+        <div class="card-header">
+          <div class="dot"></div>
+          <h2>President</h2>
+        </div>
+        <div class="iframe-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRi4dQi2G_-mUO7kxtJG3e5IzOAD0ValC8yXpD55aXdHK17aqmcbb24JSYO7rvABMwV7kcFvU6Fa0P5/pubchart?oid=1105874930&format=interactive" scrolling="no"></iframe></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="dot"></div>
+          <h2>VP Internal</h2>
+        </div>
+        <div class="iframe-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRi4dQi2G_-mUO7kxtJG3e5IzOAD0ValC8yXpD55aXdHK17aqmcbb24JSYO7rvABMwV7kcFvU6Fa0P5/pubchart?oid=663333000&format=interactive" scrolling="no"></iframe></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="dot"></div>
+          <h2>VP External</h2>
+        </div>
+        <div class="iframe-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRi4dQi2G_-mUO7kxtJG3e5IzOAD0ValC8yXpD55aXdHK17aqmcbb24JSYO7rvABMwV7kcFvU6Fa0P5/pubchart?oid=305957733&format=interactive" scrolling="no"></iframe></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="dot"></div>
+          <h2>VP Finance</h2>
+        </div>
+        <div class="iframe-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRi4dQi2G_-mUO7kxtJG3e5IzOAD0ValC8yXpD55aXdHK17aqmcbb24JSYO7rvABMwV7kcFvU6Fa0P5/pubchart?oid=1323519524&format=interactive" scrolling="no"></iframe></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="dot"></div>
+          <h2>VP Administration</h2>
+        </div>
+        <div class="iframe-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRi4dQi2G_-mUO7kxtJG3e5IzOAD0ValC8yXpD55aXdHK17aqmcbb24JSYO7rvABMwV7kcFvU6Fa0P5/pubchart?oid=396337018&format=interactive" scrolling="no"></iframe></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="dot"></div>
+          <h2>VP Communications</h2>
+        </div>
+        <div class="iframe-wrap"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRi4dQi2G_-mUO7kxtJG3e5IzOAD0ValC8yXpD55aXdHK17aqmcbb24JSYO7rvABMwV7kcFvU6Fa0P5/pubchart?oid=1687171479&format=interactive" scrolling="no"></iframe></div>
+      </div>
+    </div>
+
+    <footer>charts should auto update unless i made a mistake</footer>
+  </div>
+
+
+</body></html>
