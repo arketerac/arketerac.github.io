@@ -10,14 +10,15 @@
      COLOR SCHEME — Edit these to change the whole page
      ============================================= */
   :root {
-    --bg: #1A1A00;              /* Page background */
-    --card-bg: #474700;         /* Card background */
-    --card-border: #DAA520;     /* Card border color */
-    --accent: #C49102;          /* Accent color (badge, dots, hover glow) */
-    --text: #e2e4ea;            /* Body text color */
-    --text-muted: #FFFF8A;      /* Subtitle / footer text */
-    --heading: #ffffff;         /* Heading text color */
-  }
+  --bg: #1A1A00;
+  --card-bg: #474700;
+  --card-border: #DAA520;
+  --accent: #C49102;
+  --accent-glow: rgba(196, 145, 2, 0.4); /* ADD THIS */
+  --text: #e5e7eb;
+  --text-muted: #a3a3a3;
+  --heading: #ffffff;
+ }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
